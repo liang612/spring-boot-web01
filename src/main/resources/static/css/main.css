@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style:none;
+    outline: none;
+}
+.header{
+    height: 65px;
+    background-color: slategray;
+}
+
+.header span{
+
+    height: 30px;
+    color: #ffffff;
+    padding: 18px;
+    display: inline-block;
+    font-size: 15px;
+}
+.left{
+    position: absolute;
+}
+.left_list{
+    width: 130px;
+    height: 500px;
+    background-color: aliceblue;
+    display: block;
+}
+.left_list a{
+    color: #000;
+    text-decoration: none;
+}
+.left_list a:hover{
+    color: cornflowerblue;
+    text-decoration: none;
+}
+.left_list a:active{
+    text-decoration: none;
+    color: blue;
+}
+
+.left_list dt{
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.right{
+    width: 1000px;
+    height: 500px;
+    background-color: silver;
+    position: absolute;
+    left: 130px;
+    top: 65px;
+}

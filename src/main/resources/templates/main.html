@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <link  rel="stylesheet" type="text/css" th:href="@{css/main.css}" >
+</head>
+<body>
+<header th:fragment="topbar">
+    <div class="header" >
+        <span th:text="|欢迎登录 ,${session.loginName}|"></span>
+    </div>
+</header>
+<div class="left" th:fragment="item" >
+    <dl class="left_list">
+        <dt><a th:href="@{/#}">主页</a></dt>
+        <dt><a th:href="@{/emps}">员工列表</a></dt>
+        <dt><a th:href="@{/#}">数据统计</a></dt>
+        <dt><a th:href="@{/#}">信息修改</a></dt>
+    </dl>
+</div>
+<div class="right">
+    <h3>主页面内容</h3>
+</div>
+</body>
+</html>
