@@ -1,10 +1,13 @@
 package com.bryan.dao;
 
 import com.bryan.domin.Employee;
+import org.apache.ibatis.annotations.Mapper;
+import org.mybatis.spring.annotation.MapperScan;
 
 import java.util.List;
 
-public interface EmplDao {
+@Mapper
+public interface EmplMapper {
 	//查询所有员工
 	List<Employee> findAll();
 

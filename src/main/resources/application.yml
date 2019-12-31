@@ -33,3 +33,7 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
+mybatis:
+  config-location: classpath:mybatis\mybatis-config.xml
+  mapper-locations: classpath:mybatis\mapper\*.xml
+# 配置mybatis

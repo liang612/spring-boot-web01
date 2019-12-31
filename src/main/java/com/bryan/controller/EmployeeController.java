@@ -1,5 +1,6 @@
 package com.bryan.controller;
 
+import com.bryan.dao.EmplMapper;
 import com.bryan.domin.Employee;
 import com.bryan.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +16,14 @@ public final class EmployeeController {
 	@Autowired
 	private EmployeeMapper employeeMapper;
 
+	@Autowired
+	private EmplMapper emplMapper;
+
 	//查询所有员工返回列表
 	@GetMapping("/emps")
 	public final String list(Model model) {
-		List<Employee> employees = employeeMapper.findAll();
+//		List<Employee> employees = employeeMapper.findAll(); //注解方式
+		List<Employee> employees=emplMapper.findAll();			//配置文件方式
 		//把员工数据存入Request域
 		model.addAttribute("emps", employees);
 		return "emp/list";

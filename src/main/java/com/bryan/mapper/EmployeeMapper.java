@@ -2,11 +2,12 @@ package com.bryan.mapper;
 
 import com.bryan.domin.Employee;
 import org.apache.ibatis.annotations.*;
+import org.mybatis.spring.annotation.MapperScan;
 
 import java.util.List;
 
 //指定这是一个操作数据库的mapper
-
+@Mapper
 public interface EmployeeMapper {
 
 	//查找所有员工
