@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bryan.dao.EmplMapper">
+    <!--查找所有员工-->
+    <select id="findAll" resultType="com.bryan.domin.Employee">
+        SELECT * FROM employee
+    </select>
+
+    <!--根据员工编号查找-->
+    <select id="findByNum" parameterType="Integer" resultType="com.bryan.domin.Employee">
+        SELECT * FROM employee WHERE emplNum=#{emplNum}
+    </select>
+
+    <!--添加员工-->
+    <insert id="save" parameterType="com.bryan.domin.Employee">
+        INSERT INTO employee(emplNum,emplName,duty,sex,age,address) " +
+    "values (#{emplNum},#{emplName},#{duty},#{sex},#{age},#{address})
+    </insert>
+
+    <!--修改员工信息-->
+    <update id="update" parameterType="com.bryan.domin.Employee">
+        UPDATE employee SET emplName=#{emplName},duty=#{duty},sex=#{sex}," +
+    "age=#{age},address=#{address} WHERE emplNum=#{emplNum}
+    </update>
+
+    <!--删除员工-->
+    <delete id="delete" parameterType="Integer">
+        DELETE FROM employee WHERE emplNum=#{emplNum}
+    </delete>
+</mapper>

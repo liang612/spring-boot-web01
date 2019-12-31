@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--&lt;!&ndash;引入jdbc配置文件&ndash;&gt;
+    <properties resource="jdbcConfig.properties"></properties>
+
+    &lt;!&ndash;配置默认环境&ndash;&gt;
+    <environments default="mysql">
+        &lt;!&ndash;配置mysql环境&ndash;&gt;
+        <environment id="mysql">
+            &lt;!&ndash;配置事务类型&ndash;&gt;
+            <transactionManager type="JDBC"/>
+            &lt;!&ndash;配置数据库连接池&ndash;&gt;
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>-->
+
+    <!--&lt;!&ndash;指定Dao接口所在的位置&ndash;&gt;
+    <mappers>
+        <package name="com.bryan.dao"/>
+    </mappers>-->
+</configuration>
